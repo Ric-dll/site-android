@@ -1,0 +1,399 @@
+/* Estilo para telas menores que 900px (dispositivos móveis em modo retrato) */
+@media (max-width: 900px) {
+    p{
+        font-size: 10pt;
+    }
+    ul li strong{
+        font-size: 10pt;
+    }
+
+    .tituloApresentacao{
+        margin-bottom: 25px !important;
+    }
+
+    .conteudo {
+        font-size: 12pt;
+        padding: 0 10px; /* Espaçamento interno menor para dispositivos menores */
+    }
+    
+    .linkImagem{
+        text-align: center;
+        margin-top: 3px !important;
+        font-size: 5pt !important;
+    }
+
+    .menu-btn-line{
+        width: 8px !important;
+        height: auto ;
+    }
+    .apresentacao {
+        flex-direction: column;
+    }
+
+    .itemApresentacao {
+        flex: 1 1 80%;
+        margin-bottom: 20px;
+    }
+    
+    .imagemPaginaInicial{
+        width: 80% !important;
+        height: auto !important;
+    }
+
+    #imagemApresentacao {
+        width: 10px;
+    }
+
+    h1 {
+        word-break: keep-all; /* Evita quebra de palavras asiáticas e scripts com espaço estreito */
+        overflow-wrap: break-word; /* Quebra de palavras quando necessário para ajustar ao contêiner */
+        font-size: 30px !important; /* Reduz o tamanho da fonte para melhor se ajustar às telas menores */
+        margin: 0 10px; /* Adiciona margem lateral para evitar que o texto encoste nas bordas */
+        text-align: center; /* Centraliza o texto */
+    }
+    h2{
+        font-size: 15pt;
+        text-align: center;
+    }
+
+    .blocoPrincipal {
+        padding: 10px; /* Adiciona padding ao contêiner principal */
+    }
+
+    .conteudo {
+        padding: 10px; /* Adiciona padding ao conteúdo */
+    }
+
+    
+    .containerHistoria {
+        display: flex;
+        flex-direction:column; /* Mantém as imagens lado a lado */
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: 20px; /* Espaçamento entre as imagens */
+        width: 100%; /* Certifique-se de que o contêiner ocupe toda a largura disponível */
+        height: auto; /* Altura automática para ajustar ao conteúdo */
+        overflow: hidden; /* Evita que o conteúdo transborde do contêiner */
+    }
+
+    .criadoresAndroidInc {
+        width: 35%; /* Cada imagem ocupa 45% da largura do contêiner */
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    .androidVersions{
+        width: 100%; /* Cada imagem ocupa 45% da largura do contêiner */
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    /* Ajustes para o GIF em dispositivos móveis */
+    .imagemCantoInferiorDireito {
+        width: 20% !important; /* Define a largura para 30% do contêiner */
+        height: auto !important; /* Mantém a proporção da imagem */
+    }
+}
+
+/* Estilo para telas maiores que 900px (tablets e desktops) */
+@media (min-width: 900px) {
+    
+    .containerHistoria {
+        display: flex;
+        flex-direction: row; /* Mantém as imagens lado a lado */
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: 10px; /* Espaçamento entre as imagens */
+        width: 100%; /* Certifique-se de que o contêiner ocupe toda a largura disponível */
+        height: auto; /* Altura automática para ajustar ao conteúdo */
+        overflow: hidden; /* Evita que o conteúdo transborde do contêiner */
+    }
+
+    .criadoresAndroidInc {
+        width: 45%; /* Cada imagem ocupa 45% da largura do contêiner */
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+    .androidVersions{
+        width: 80%; /* Cada imagem ocupa 45% da largura do contêiner */
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos gerais */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* impede a rolagem horizontal */
+    transition: transform 0.3s ease; /* Transição para o deslizamento do conteúdo */
+}
+
+h1 {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 40px;
+    font-size: 40px;
+    color: #388E3C;
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit; /* Herda a cor do texto circundante */
+    font: inherit; /* Herda todas as propriedades de fonte */
+    background: none; /* Remove qualquer fundo */
+    border: none; /* Remove qualquer borda */
+    padding: 0; /* Remove qualquer padding */
+    margin: 0; /* Remove qualquer margem */
+}
+
+.item {
+    display: flex;
+    flex-direction: column; /* Coloca a imagem e o link em uma coluna */
+    align-items: center; /* Centraliza a imagem e o link */
+    margin-bottom: 20px; /* Espaçamento entre os itens */
+}
+
+/* Menu */
+.menu-btn {
+    position: fixed;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor:grab;
+    z-index: 999;
+    transition: transform 0.3s ease; /* Adicionamos a transição para o botão */
+}
+
+.menu-btn-line {
+    width: 30px;
+    height: 5px;
+    background-color: #333;
+    margin: 5px 0;
+    border-radius: 100px;
+}
+
+.menu-btn.open {
+    transform: translateX(180px); /* Movemos o botão junto com o menu */
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -180px; /* Reduzimos a largura do menu */
+    width: 180px; /* Reduzimos a largura do menu */
+    height: 100%;
+    background-color: #292929;
+    transition: left 0.3s ease; /* Alteramos a transição para left */
+    z-index: 99;
+    color: white; /* Cor do texto do menu */
+    padding-top: 5px; /* Adicionamos um espaço para o ícone de fechar o menu */
+}
+
+body.menu-open .blocoPrincipal {
+    margin-left: 5px; /* Compensamos a largura do menu com margem esquerda */
+}
+
+.menu.open {
+    left: 0; /* Movemos o menu para a posição visível */
+}
+
+.blocoPrincipal ul li{
+    list-style-type: none;
+    padding-left: 20px; /* Recuo à esquerda para o texto */
+    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+}
+
+.blocoPrincipal ul li::before {
+    content: "\2022"; /* Adiciona uma bolinha como marcador */
+    display: inline-block;
+    width: 1em; /* Largura da bolinha */
+    margin-left: -1em; /* Ajuste para alinhar com o recuo do texto */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 15px;
+    border-bottom: 1px solid #555;
+}
+
+.menu ul li a {
+    color: inherit; /* Herda a cor do texto do menu */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease; /* Adicionamos uma transição para a cor do texto */
+}
+
+.menu ul li a:hover {
+    color: #ddd; /* Mudamos a cor do texto quando o mouse passa sobre o link */
+}
+
+
+.blocoPrincipal {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    transform: translateX(0); /* Inicialmente, o conteúdo não é deslocado */
+}
+
+/* Rodapé */
+.rodape {
+    position:fixed;
+    text-align-last: center;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    background-color: #292929;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.containerHistória{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.criadoresAndroidInc {
+    border-radius: 4%;
+    width: 400px; /* Defina o tamanho desejado */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 5px; /* Espaçamento entre as imagens */
+}
+
+.androidVersions{
+    border-radius: 4%;
+    width: 1000px; /* Defina o tamanho desejado */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 5px; /* Espaçamento entre as imagens */
+}
+
+/* Estilo do bloco de apresentação */
+.imagemPaginaInicial {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: auto;
+}
+
+body img.imagemCantoInferiorDireito {
+    position: fixed;
+    bottom: 60px;
+    right: 1%;
+    width: 100px; /* Defina o tamanho desejado */
+    height: auto;
+}
+
+.apresentacao {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 90px;
+}
+
+.itemApresentacao {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.itemApresentacao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.imagemApresentacao {
+    width: 100%;
+    height: 200px;
+    resize: none;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+h2 {
+    margin-top: 55px;
+}
+
+.conteudo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.conteudoApresentacao {
+    padding: 20px;
+}
+
+.tituloApresentacao {
+    margin-top: 0px;
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 60px;
+    color: #292929;
+}
+
+.descricaoApresentacao {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Botão de saiba mais */
+button {
+    display: inline-block;
+    font-weight: bold;
+    background-color: #31AA52;
+    color: #fff;
+    font-size: 16px;
+    padding: 13px 23px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #388E3C;
+}
+
+/* Ícones */
+.icone {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+/* Adicionamos um deslocamento ao conteúdo quando o menu está aberto */
+body.menu-open .blocoPrincipal {
+    transform: translateX(250px);
+}
+
+.linkImagem{
+    font-size: 10px ;
+}
